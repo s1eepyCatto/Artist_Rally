@@ -1,0 +1,71 @@
+*{ /* universal selector. Selects all elements. */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* include the padding and border in an element's total width and height. */
+}
+
+#directory {
+    height: 5vh;
+    background-color: plum;
+    padding: 0px 20px;
+}
+
+#mapContainer{
+    width: 100vw; /* 100% of the viewport's width. */
+    height: 45vh; /* 100% of the viewport's height. */
+    background-color: lightskyblue; /* your choice of color. */
+    position: relative; /* to enable position: absolute to its child - image element. */ 
+    overflow: hidden; /* the overflow is clipped. */
+}
+#map{
+    position: absolute; /* required to position element using left and top CSS properties. */
+}
+
+#rallyInfoSection {
+    min-height: 50vh;
+    max-height: 50vh;
+    background-color: lightgray;
+    overflow-y: scroll;
+    padding: 10px 20px;
+}
+
+button#register-rally {
+    border: none;
+    border-radius: 5px;
+    height: 70%;
+}
+
+#sign-in-button img {
+    max-width: 50%;
+}
+
+.icon img{
+    max-width: 50%;
+}
+
+.center-vertically {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rally-container {
+    padding-top: 5%;
+}
+
+.subtitle {
+    color: grey;
+}
+
+.rally-summary {
+    /* idk might make the heart and eye look wrong if the width doesn't get filled up  */
+    width: 60%;
+}
+
+.visibility-toggle img {
+    content: url("/icons/eye-close.png");
+}
+
+.visibility-toggle.hidden-state img {
+    content: url("/icons/eye-open.png" );
+}

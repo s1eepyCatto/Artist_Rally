@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="directory" class="center-vertically">
+        <div>
+            <h3>SMASH 2026</h3>
+            <p>Level 1<p>
+        </div>
+        <div class="center-vertically">
+            <button id="register-rally" class="btn">Start your own Stamp rally</button>
+            <button id="sign-in-button">
+                <img src="/icons/profile-icon.png" alt="user profile icon">
+                <p>Sign in</p>
+            </button>
+        </div>
+    </div>
+    <div id="mapContainer">
+        <!-- need to change and get from db if more than one con -->
+        <img src="/map/smashMap.png" alt="a map of smash convention" id="map">
+    </div>
+    <link rel="stylesheet" href="convention_map.css">
+    <section id="rallyInfoSection">
+        <!-- substitute name -->
+        <h2>Rallies at SmashCon</h2>
+        <div id="rallyList">
+            <!-- help -->
+        </div>
+        <!-- uncomment below to test rally list formatting -->
+        <!-- <div class="rally-container center-vertically">
+            <div>
+                <p>Limbus Company Rally</p>
+                <p>Limbus Company | hosted by wago</p>
+            </div>
+            <div>
+                <button>
+                        view
+                </button>
+                <button>
+                        favourite
+                </button>
+            </div>
+        </div> -->
+    </section>
+    <script src="convention_map_pan_zoom.js"></script>
+    <script src="convention_map_rally.js"></script>
+</body>
+</html>
