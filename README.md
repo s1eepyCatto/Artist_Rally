@@ -25,6 +25,12 @@ account is temporary and deleted once a convention is over
 - Each artist must create a account so that they can edit anything in case of change
 - This marker then becomes visible to those interested in the stamp rally
 
+# Update Log
+#### Update: 21/06/26 11:26PM 
+    - users now have to sign in to favorite (see example sign ins in data/account.json if you want test data)
+    - Favourites and accounts are currently static data (so any changes or new data will not be shown)
+    - my next goal is to be able to store real data
+
 # File explaination
 1. index.html => the first page which lets you select which convention you are attending
     - index.js so far is only used for redirection to convention_map.html
@@ -36,6 +42,7 @@ account is temporary and deleted once a convention is over
         - currently only zooming works but not panning. This needs to be fixed
         - (code taken from nurbs 3000 https://github.com/nurbs3000/may2025/blob/main/panZoomImage.html)
     - convention-map-rally.js is another script used by convention_map.html used to display individual rally associated data.
+    - convention-sign-in.js is another script used by convention_map.html used for sign-in behavior
 3. Other folders
     - Data Folder : Contains Dummy Data for Testing
     - Icons : Contains Images used for icons in the app
