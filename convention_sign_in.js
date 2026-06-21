@@ -55,7 +55,7 @@ function getCookie(name) {
       return cookieValue;
     }
   }
-  return null; // Return null if cookie not found
+  return null;
 }
 
 // Function to delete all cookies
@@ -68,16 +68,40 @@ function deleteAllCookies() {
     });
 }
 
+// Handles UI differences between when signed in and out
 function toggleSignInOut() {
     if (getCookie("signedin") === "true") {
         // show sign out button
         signOutBtn.style.display = 'inline'
         signInBtn.style.display = 'none'
+
+        // show liked rallies (toggle on)
+        applyLikedRallies();
     } else {
         // show sign in button
         signOutBtn.style.display = 'none'
         signInBtn.style.display = 'inline'
+
+        // return favourited rallys to default values
+        const hearts = document.getElementsByClassName("heart-toggle");
+        for (const heart of hearts) {
+            heart.classList.remove("hidden-state");
+        }
     }
 }
 
+// show liked rallies (toggle on)
+function applyLikedRallies() {
+    for (const rally_id of getCookie("likedrallies")) {
+        const container = rallyList.querySelector(`.rally-container[data-rally-id="${rally_id}"]`);
+        if (!container) continue;
+
+        const heartToggle = container.querySelector(".heart-toggle");
+        if (heartToggle) {
+            heartToggle.classList.add("hidden-state");
+        }
+    }
+}
+
+// alters ui appearance upon load based on whether user is signed in 
 document.addEventListener("load", toggleSignInOut());

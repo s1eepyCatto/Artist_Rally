@@ -1,5 +1,6 @@
 [
   {
+    "rally_id": "1",
     "rally_name": "limbus company rally",
     "fandom": "limbus company",
     "host": "wago",
@@ -7,6 +8,7 @@
     "link": "www.youtube.com"
   },
   {
+    "rally_id": "2",
     "rally_name": "olruggio babygirl rally",
     "fandom": "Witch Hat Atelier",
     "host": "coco",
@@ -14,6 +16,7 @@
     "link": "www.youtube.com"
   },
   {
+    "rally_id": "3",
     "rally_name": "The Magic School Bus rally",
     "fandom": "The Magic School Bus",
     "host": "miss teacher",
@@ -21,13 +24,15 @@
     "link": "www.youtube.com"
   },
   {
+    "rally_id": "4",
     "rally_name": "Link Click rally",
     "fandom": "Link Click",
     "host": "Vein did nothing wrong",
     "info": "Stop thinkin 'bout it",
     "link": "www.youtube.com"
   },
-    {
+  {
+    "rally_id": "5",
     "rally_name": "Doomed Yuri/Yaoi rally",
     "fandom": "Misc",
     "host": "Ivan",
@@ -35,6 +40,7 @@
     "link": "www.youtube.com"
   },
   {
+    "rally_id": "6",
     "rally_name": "ORV rally",
     "fandom": "Omnicient Readers Viewpoint",
     "host": "Punisher",
@@ -42,6 +48,7 @@
     "link": "www.youtube.com"
   },
   {
+    "rally_id": "7",
     "rally_name": "klein moretti rally",
     "fandom": "Lord of The Mysteries",
     "host": "Mr Fool",
@@ -49,6 +56,7 @@
     "link": "www.youtube.com"
   },
   {
+    "rally_id": "8",
     "rally_name": "Eevee rally",
     "fandom": "Pokemon",
     "host": "Salad",

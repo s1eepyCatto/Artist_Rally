@@ -6,6 +6,7 @@ fetch("/data/rallies.json")
     for (const rally of data) {
         //  create a new container for each rally in the db
         const container = document.createElement("div");
+        container.dataset.rallyId = rally.rally_id;
         container.className = "rally-container center-vertically";
         container.innerHTML = `
             <div class="rally-summary">
