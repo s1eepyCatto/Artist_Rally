@@ -30,22 +30,22 @@ function panZoom(e){ // contain all logic to implement Pan and Zoom.
         if(mouseOutsideImg()) return; // do nothing if LMB is pressed outside the image.
         [initialX,initialY] = [mX,mY]; // desctucturing assignment syntax. Assign initial mouse coordinate to the current (the pan is started).
         isPan = true; // set flag, to let the "mousemove" know, that from now on(until mouse released) mouse movement must update the image position.
-        console.log("hello")
+        // console.log("hello")
     }
     if(e.type === "mousemove"){ // if mouse event is "mousemove".
         console.log({mX, mY, imgLeft, imgTop, scale, outside: mouseOutsideImg()});
         if(!e.buttons%2) isPan = false; // if LMB is not held, the pan can't be active.
         if(!isPan) return; // return if the pan operation is not active.
         [dx,dy] = [mX-initialX,mY-initialY]; // destructuring assignment syntax. Calculate and assign delta x and delta y(to update the image style attribute on lines 73 and 74).
-        console.log("doing")
-        console.log(mX-initialX)
+        // console.log("doing")
+        // console.log(mX-initialX)
     }
     if(e.type === "mouseup"){ // if mouse event is "mouseup".
         if(!isPan) return; // if the pan is not active, return.
         isPan = false; // set flag isPan to false, meaning the pan is ended.
         imgLeft += mX-initialX; // update horizontal and vertival image coordinated.
         imgTop += mY-initialY;
-        console.log("end")
+        // console.log("end")
     }
     imgElem.style.left = imgLeft+dx+"px"; // and next 3 lines update the image style attribute, changing image position and size.
     imgElem.style.top = imgTop+dy+"px";

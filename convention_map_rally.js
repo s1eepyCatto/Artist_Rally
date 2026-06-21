@@ -5,7 +5,6 @@ fetch("/data/rallies.json")
 .then(data => {
     for (const rally of data) {
         //  create a new container for each rally in the db
-        console.log(rally.rally_name);
         const container = document.createElement("div");
         container.className = "rally-container center-vertically";
         container.innerHTML = `
@@ -17,17 +16,28 @@ fetch("/data/rallies.json")
                 <button class="icon visibility-toggle">
                         <img src="/icons/eye-close.png"/>
                 </button>
-                <button class="icon">
+                <button class="icon heart-toggle">
                         <img src="/icons/heart-icon.png"/>
                 </button>
             </div>
         `;
         rallyList.appendChild(container);
 
-        const toggleBtn = container.querySelector(".visibility-toggle");
+        const visibilityToggle = container.querySelector(".visibility-toggle");
 
-        toggleBtn.addEventListener("click", () => {
-            toggleBtn.classList.toggle("hidden-state");
+        visibilityToggle.addEventListener("click", () => {
+            visibilityToggle.classList.toggle("hidden-state");
+        });
+
+        const heartToggle = container.querySelector(".heart-toggle");
+
+        heartToggle.addEventListener("click", () => {
+            if (getCookie("signedin") === "true") {
+                heartToggle.classList.toggle("hidden-state");
+                // TODO: add to server
+            } else {
+                signInModal.style.display = 'inline'
+            }
         });
     }
 });

@@ -62,10 +62,52 @@ button#register-rally {
     width: 60%;
 }
 
-.visibility-toggle img {
-    content: url("/icons/eye-close.png");
-}
-
 .visibility-toggle.hidden-state img {
     content: url("/icons/eye-open.png" );
+}
+
+.heart-toggle.hidden-state img {
+    content: url("/icons/heart-icon-filled.png");
+}
+
+#sign-in-modal {
+    /* display: none; */
+    background-color: gray;
+    height: 420px;
+    width: 350px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 6px 2px #666;
+    font-size: 0.8rem;
+    /* the styling below makes it center of screen */
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#sign-in-form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5%;
+}
+
+.close-modal-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    padding-left: 10%;
+}
+
+.modal-inner p{
+    font-weight: bold;
+}
+
+.text-section{
+    padding: 5% 0%;
 }

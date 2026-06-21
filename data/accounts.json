@@ -1,0 +1,27 @@
+[
+  {
+    "userName": "john wick",
+    "password": "1111",
+    "LikedRallies": [1, 3]
+  },
+  {
+    "userName": "a",
+    "password": "a",
+    "LikedRallies": [1, 3]
+  },
+  {
+    "userName": "b",
+    "password": "b",
+    "LikedRallies": [1, 3]
+  },
+  {
+    "userName": "c",
+    "password": "c",
+    "LikedRallies": [1, 3]
+  },
+  {
+    "userName": "abc",
+    "password": "abc",
+    "LikedRallies": [1, 3]
+  }
+]

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="convention_map.css">
 </head>
 <body>
     <div id="directory" class="center-vertically">
@@ -23,7 +24,6 @@
         <!-- need to change and get from db if more than one con -->
         <img src="/map/smashMap.png" alt="a map of smash convention" id="map">
     </div>
-    <link rel="stylesheet" href="convention_map.css">
     <section id="rallyInfoSection">
         <!-- substitute name -->
         <h2>Rallies at SmashCon</h2>
@@ -46,6 +46,40 @@
             </div>
         </div> -->
     </section>
+    <div class="modal" id="sign-in-modal">
+        <div class="close-modal-btn-container">
+            <button class="modal-close-btn" id="modal-close-btn">X</button>
+        </div>
+        <div class="modal-inner" id="modal-inner">
+            <h2>Sign In</h2>
+            <div class="text-section">
+                <p>After Signing in you will be able to: </p>
+                <ul>
+                    <li>Mark off Stamp Rallies</li>
+                    <li>Bookmark Rallies before the Con</li>
+                </ul>
+                <p>For any artists tabling you will be able to:</p>
+                <ul>
+                    <li>Create Stamp Rallies</li>
+                    <li>Join stamp Rallies</li>
+                    <li>Add a table marker</li>
+                </ul>
+            </div>
+            <hr>
+            <form id="sign-in-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your full name" required/>
+                <label for="password">Password (Optional):</label>
+                <input type="password" id="password" placeholder="Enter your Password"/>
+                <p>Important Note: </p>
+                <ul>
+                    <li>This data will be erased a week after the convention ends</li>
+                    <li>Please create a new account for each Convention</li>
+                </ul>
+                <button type="submit" class="modal-btn">Sign In</button>
+            </form>
+        </div>
+    </div>
     <script src="convention_map_pan_zoom.js"></script>
     <script src="convention_map_rally.js"></script>
 </body>

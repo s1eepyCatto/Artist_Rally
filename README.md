@@ -60,3 +60,4 @@ account is temporary and deleted once a convention is over
 # Other notes:
 - I Opted for a Web App since writing code for both ios and android seems painful and I don't wanna pay app store fees or force people to download an app to view stamp rallies
 - Working on mobile version first
+- icons i am using can be found at https://www.streamlinehq.com/icons/plump-remix-style?search=heart
