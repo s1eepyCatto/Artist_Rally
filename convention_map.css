@@ -70,8 +70,12 @@ button#register-rally {
     content: url("/icons/heart-icon-filled.png");
 }
 
+#sign-out-button {
+    display: none;
+}
+
 #sign-in-modal {
-    /* display: none; */
+    display: none;
     background-color: gray;
     height: 420px;
     width: 350px;
