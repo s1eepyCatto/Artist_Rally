@@ -5,14 +5,14 @@
 }
 
 #directory {
-    height: 5vh;
+    height: 7vh;
     background-color: plum;
     padding: 0px 20px;
 }
 
 #mapContainer{
     width: 100vw; /* 100% of the viewport's width. */
-    height: 45vh; /* 100% of the viewport's height. */
+    height: 43vh; /* 100% of the viewport's height. */
     background-color: lightskyblue; /* your choice of color. */
     position: relative; /* to enable position: absolute to its child - image element. */ 
     overflow: hidden; /* the overflow is clipped. */
@@ -63,11 +63,11 @@ button#register-rally {
 }
 
 .visibility-toggle.hidden-state img {
-    content: url("/icons/eye-open.png" );
+    content: url("./icons/eye-open.png" );
 }
 
 .heart-toggle.hidden-state img {
-    content: url("/icons/heart-icon-filled.png");
+    content: url("./icons/heart-icon-filled.png");
 }
 
 #sign-out-button {

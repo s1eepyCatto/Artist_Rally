@@ -25,7 +25,7 @@ signInForm.addEventListener('submit', function(e){
     e.preventDefault()
     username = document.getElementById("username").value
     password = document.getElementById("password").value
-    fetch("/data/accounts.json")
+    fetch("./data/accounts.json")
     .then(response => response.json())
     .then(data => {
         const account = data.find(
@@ -93,9 +93,9 @@ function toggleSignInOut() {
 // show liked rallies (toggle on)
 function applyLikedRallies() {
     for (const rally_id of getCookie("likedrallies")) {
+        // console.log(rallyList.querySelector(`.rally-container[data-rally-id="${rally_id}"]`))
         const container = rallyList.querySelector(`.rally-container[data-rally-id="${rally_id}"]`);
         if (!container) continue;
-
         const heartToggle = container.querySelector(".heart-toggle");
         if (heartToggle) {
             heartToggle.classList.add("hidden-state");

@@ -1,6 +1,6 @@
 const rallyList = document.getElementById("rallyList")
 
-fetch("/data/rallies.json")
+fetch("./data/rallies.json")
 .then(response => response.json())
 .then(data => {
     for (const rally of data) {
@@ -15,10 +15,10 @@ fetch("/data/rallies.json")
             </div>
             <div>
                 <button class="icon visibility-toggle">
-                        <img src="/icons/eye-close.png"/>
+                        <img src="./icons/eye-close.png"/>
                 </button>
                 <button class="icon heart-toggle">
-                        <img src="/icons/heart-icon.png"/>
+                        <img src="./icons/heart-icon.png"/>
                 </button>
             </div>
         `;
