@@ -26,12 +26,20 @@ account is temporary and deleted once a convention is over
 - This marker then becomes visible to those interested in the stamp rally
 
 # Update Log
+#### Update: 27/06/26 11:30PM 
+    - repo split into frontend and backend folders
+    - added server.js to handle server requests
+    - added initialise_database.js to populate MySQL database with dummy data
+    - local MySQL database up and running (backend contributors will have to download mysql onto their device and edit             enironment variables)
+    - The convention list no longer contain static data after being connected to database (however still redirect to same          page which will have to be changed)
+
 #### Update: 21/06/26 11:26PM 
     - users now have to sign in to favorite (see example sign ins in data/account.json if you want test data)
     - Favourites and accounts are currently static data (so any changes or new data will not be shown)
     - my next goal is to be able to store real data
 
 # File explaination
+### Frontend
 1. index.html => the first page which lets you select which convention you are attending
     - index.js so far is only used for redirection to convention_map.html
     - index.css is the styling for index.html to make it look ✨ prettier ✨
@@ -48,6 +56,14 @@ account is temporary and deleted once a convention is over
     - Icons : Contains Images used for icons in the app
     - Map : Contains Maps for each convention
     - Refs : Contains Code that was used as reference during development (makes it easier to refer back on)
+  
+### Backend
+1. server.js => the code for the api the frontend calls to update and grab data (GET, POST, PUT, DELETE) from the database
+    - contributors will need to update .env with their mysql credentials to test with the database
+    - server can be started using `npm start`
+3. initialise_database.js => running this file will create a mock database (if the database already exists it will delete it     and reinitialise with a new db) with prepopulated data
+   - mysql installation prerequisite
+   - contributors will need to update .env with their mysql credentials to test with the database
 
 ![image](scuffed-system-diagram.png)
 
@@ -55,12 +71,13 @@ account is temporary and deleted once a convention is over
 - Currently all roads lead to smash from the initial index page
 - Make Pan in Map zoom and Pan work
 - Make things pretty
-- Add accounts
-- Add favourites
+<s>- Add accounts</s>
+<s>- Add favourites</s>
 - Add Markers 
 - Add Rally Invites
 - Add Rally info Popups
 - Add Stall popups
+- Add special Artist accounts
 - Make a in-progress/visited marker for rallies
 - Create Unique Links for rally invites/Setup
 
